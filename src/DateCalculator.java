@@ -1,3 +1,6 @@
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -12,7 +15,7 @@ public class DateCalculator {
 
     public DateCalculator() {
         calendar = Calendar.getInstance();
-        
+
     }
 
     public Date getStartDate() {
@@ -29,5 +32,15 @@ public class DateCalculator {
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
+    }
+
+    public static String dateToDay(String inputDate, DateFormat dateFormat) throws ParseException {
+        String day;
+
+        Date date = dateFormat.parse(inputDate);    //may throw parse exception
+        DateFormat finalFormat = new SimpleDateFormat("EEEE");
+
+        day = finalFormat.format(date);
+        return day;
     }
 }
