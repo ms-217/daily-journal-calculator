@@ -13,6 +13,12 @@ public class DateCalculator {
     private Date startDate;
     private Date endDate;
 
+    /**
+     * Contructor.
+     * sets everything to default settings.
+     * Pre: none.
+     * post: a DateCalculator Object has been created.
+     */
     public DateCalculator() {
         calendar = Calendar.getInstance();
 
