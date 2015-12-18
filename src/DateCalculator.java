@@ -34,6 +34,15 @@ public class DateCalculator {
         this.endDate = endDate;
     }
 
+    /**
+     * Returns a String containing the day for the given input.
+     * Pre: dateFormat must contain a day, month and year within it somewhere.
+     * Post: a String representing a day has been returned.
+     * @param inputDate Date to get Day of the week for. Must match dateFormat pattern!
+     * @param dateFormat Pattern for the inputDate. Must contain a month, day and year!
+     * @return String representing the day of the week for the input date.
+     * @throws ParseException Thrown if pattern doesn't match with inputDate.
+     */
     public static String dateToDay(String inputDate, DateFormat dateFormat) throws ParseException {
         String day;
 
